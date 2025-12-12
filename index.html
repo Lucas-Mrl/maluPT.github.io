@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Malu Rodrigues dos Santos | CX, Operações & SDR</title>
+  <style>
+    :root {
+      --bg: #0b0d10;
+      --card: #11151b;
+      --panel: #161b23;
+      --text: #e8ecf3;
+      --muted: #9fb0c8;
+      --accent: #34d6a6;
+      --accent-2: #7fc3ff;
+      --border: #1f2530;
+      --shadow: 0 25px 70px rgba(0,0,0,0.45);
+      --radius: 18px;
+      --font-sans: "Manrope", "Segoe UI", system-ui, -apple-system, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: radial-gradient(120% 120% at 20% 20%, rgba(52,214,166,0.08), transparent),
+                  radial-gradient(110% 110% at 80% 0%, rgba(127,195,255,0.08), transparent),
+                  var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    img { max-width: 100%; border-radius: 14px; }
+    h1,h2,h3,h4 { margin: 0 0 12px; line-height: 1.2; }
+    p { margin: 0 0 14px; color: var(--muted); }
+    section { padding: 72px 0; }
+    .wrap { width: min(1100px, 92vw); margin: 0 auto; }
+    .grid { display: grid; gap: 18px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 14px 20px; border-radius: 12px;
+      background: linear-gradient(120deg, var(--accent), var(--accent-2));
+      color: #0a0c0f; font-weight: 700; box-shadow: var(--shadow);
+      border: none; cursor: pointer;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 18px 45px rgba(0,0,0,0.35); }
+    .tag { padding: 6px 12px; background: rgba(52,214,166,0.1); color: var(--accent); border-radius: 999px; font-weight: 700; font-size: 12px; letter-spacing: 0.5px; }
+    .card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow);
+    }
+    .hero {
+      display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 32px;
+      align-items: center; padding: 48px 0 32px;
+    }
+    .hero h1 { font-size: clamp(34px, 4vw, 44px); }
+    .hero p.lead { font-size: 18px; color: var(--muted); margin-bottom: 22px; }
+    .hero img { border-radius: 18px; border: 1px solid var(--border); }
+    .pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+    .section-title { display: flex; align-items: center; gap: 12px; font-size: 22px; }
+    .section-title::before {
+      content: ""; width: 38px; height: 3px;
+      background: linear-gradient(120deg, var(--accent), var(--accent-2));
+      border-radius: 99px;
+    }
+    .two-col { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 18px; }
+    .exp-card h3 { margin-bottom: 6px; }
+    .exp-meta { color: var(--muted); font-size: 14px; margin-bottom: 10px; }
+    .list { padding-left: 18px; color: var(--muted); margin: 0 0 8px; }
+    .achievements { display: grid; grid-template-columns: repeat(auto-fit,minmax(230px,1fr)); gap: 12px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+    .chip { padding: 8px 12px; background: var(--panel); border: 1px solid var(--border); border-radius: 12px; color: var(--muted); }
+    .contact { display: grid; grid-template-columns: 2fr 1fr; gap: 18px; align-items: center; }
+    footer { text-align: center; color: var(--muted); padding: 28px 0 46px; font-size: 14px; }
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .contact { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div>
+        <div class="pill-row">
+          <span class="tag">Atendimento Bilíngue | Operações | SDR</span>
+        </div>
+        <h1>Malu Rodrigues dos Santos</h1>
+        <p class="lead">Ajudo empresas a criar experiências de cliente notáveis, otimizar operações e qualificar leads de alto valor. Com sucesso comprovado atendendo milhares de clientes em inglês e português, uno empatia, organização e dados para entregar resultado — do primeiro contato à resolução completa.</p>
+        <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Falar comigo →</button>
+      </div>
+      <div>
+        <!-- Troque para a sua foto preferida -->
+        <img src="https://cdn.discordapp.com/attachments/1013602645975519364/1449119695394570363/lakjckfj.jpg?ex=693dbd62&is=693c6be2&hm=6ae3a4d6940c6f9d767858ac6852c6a3931f4db43e3c86b055855c599d1e8c67&" alt="Portrait of Malu Rodrigues dos Santos" />
+      </div>
+    </header>
+
+    <section id="about">
+      <h2 class="section-title">Sobre mim</h2>
+      <div class="card">
+        <p>Sou profissional bilíngue (português e inglês) com experiência prática em atendimento ao cliente, operações e pré-vendas. Já gerenciei mais de 3.500 clientes no Brasil e em mercados internacionais, mantendo satisfação acima de 92% e tempo médio de resposta abaixo de 5 minutos.</p>
+        <p>No Foundever (Wise), apoiei 800+ clientes internacionais em quatro meses, atingindo 92% de satisfação e 85% de resolução no primeiro contato. Como SDR na ImobEasy, qualifiquei 300 leads em dois meses e aumentei em 20% o volume de agendamentos com rotinas de follow-up e CRM. No papel atual na SKY, atendo 2.500+ clientes, coordeno 1.200+ agendamentos e mantenho satisfação acima de 95%, reduzindo divergências de estoque em 30%.</p>
+        <p>Gosto de ambientes em que comunicação clara, organização e resolução de problemas geram impacto real. Aprimoro constantemente minhas habilidades em CRMs, análise de dados e melhoria de processos. Fora do trabalho, exploro novas tecnologias, estudo Python e colaboro com colegas para crescermos juntos.</p>
+      </div>
+    </section>
+
+    <section id="expertise">
+      <h2 class="section-title">O que faço</h2>
+      <div class="two-col">
+        <div class="card">
+          <h3>Atendimento Bilíngue (EN/PT)</h3>
+          <p>Suporte empático e estruturado; triagem de filas; redução de tempo de resposta usando Zendesk e Twilio. 85% FCR e 92% CSAT no Foundever.</p>
+        </div>
+        <div class="card">
+          <h3>Experiência & Sucesso do Cliente</h3>
+          <p>Gestão B2C de ponta a ponta. Na SKY, 2.500+ clientes atendidos, 1.200+ agendamentos, satisfação acima de 95%.</p>
+        </div>
+        <div class="card">
+          <h3>Operações & Otimização de Processos</h3>
+          <p>Logística, estoque, rotinas financeiras, relatórios. Com SAP/Excel/Sheets, reduzi divergências de estoque em 30%, tempo de reposição em 20% e ganhei 15% em eficiência.</p>
+        </div>
+        <div class="card">
+          <h3>Pré-Vendas / SDR & Qualificação</h3>
+          <p>Engajamento, discovery e handoff fluido. Na ImobEasy, 300+ leads em dois meses, +20% agendamentos, tempo de transferência de lead -25% com automação no Bitrix24.</p>
+        </div>
+        <div class="card">
+          <h3>CRM & Suporte Orientado a Dados</h3>
+          <p>Zendesk, Bitrix24, Twilio, SAP, Salesforce, Excel, Google Sheets. Crio dashboards, analiso comportamento e melhoro SLA, NPS e conversão.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2 class="section-title">Experiência</h2>
+      <div class="grid" style="gap:14px;">
+        <div class="card exp-card">
+          <h3>Analista de Operações & Atendimento — SKY</h3>
+          <div class="exp-meta">Jan 2025 – Presente · Manicoré, Amazonas, Brasil</div>
+          <ul class="list">
+            <li>Atendimento via WhatsApp/telefone; triagem, agendamento e follow-up até a resolução.</li>
+            <li>Pós-vendas, retenção e reativação; planejamento de campo; coordenação com times técnicos.</li>
+            <li>Controle de estoque com SAP; auditorias; prevenção de faltas; contas a pagar/receber.</li>
+            <li>Dashboards e KPIs em Excel; padronização de processos; apoio a folha de pagamento.</li>
+          </ul>
+          <p><strong>Impacto:</strong> 2.500+ clientes, 95%+ satisfação; 1.200+ agendamentos com >90% de conclusão; divergências de estoque -30%; reposição -20%; eficiência +15%.</p>
+        </div>
+
+        <div class="card exp-card">
+          <h3>SDR — ImobEasy</h3>
+          <div class="exp-meta">Set 2024 – Dez 2024 · Curitiba, Brasil (Remoto)</div>
+          <ul class="list">
+            <li>Prospecção por telefone/WhatsApp; identificação de necessidades; follow-ups estruturados.</li>
+            <li>Pipeline no Bitrix24; automações; alinhamento com marketing e vendas.</li>
+          </ul>
+          <p><strong>Impacto:</strong> 300+ leads em dois meses; 35% conversão para visitas; agendamentos +20%; respostas <5 min; transferência de lead -25%.</p>
+        </div>
+
+        <div class="card exp-card">
+          <h3>Atendimento Bilíngue — Foundever (Wise)</h3>
+          <div class="exp-meta">Jan 2024 – Set 2024 · Curitiba, Paraná, Brasil</div>
+          <ul class="list">
+            <li>Suporte fim a fim (EN/PT) para clientes Wise; 800+ clientes internacionais.</li>
+            <li>Filas e priorização no Zendesk; roteamento via Twilio; colaboração com Ops/Financeiro/TI/Suporte.</li>
+            <li>Análise de comportamento; melhorias de processo; alinhamento via Slack.</li>
+          </ul>
+          <p><strong>Impacto:</strong> 92% satisfação; 85% resolução no primeiro contato; tempo de resposta -25%.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2 class="section-title">Habilidades & Ferramentas</h2>
+      <div class="card">
+        <div class="chips">
+          <span class="chip">Suporte & CX: empatia, escuta ativa, resolução de conflitos, jornada, NPS</span>
+          <span class="chip">Operações: logística, estoque, rotinas financeiras, SLAs</span>
+          <span class="chip">Pré-vendas/SDR: qualificação, pipeline, follow-up</span>
+          <span class="chip">CRM: Zendesk, Bitrix24, Twilio, Salesforce, SAP</span>
+          <span class="chip">Dados: Excel avançado, Google Sheets, dashboards, Python</span>
+          <span class="chip">Idiomas: Português (nativo), Inglês (profissional), Francês (básico)</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="achievements">
+      <h2 class="section-title">Principais Resultados</h2>
+      <div class="achievements">
+        <div class="card">SKY: 2.500+ clientes, 95%+ satisfação; 1.200+ serviços; estoque +30% acurácia; eficiência +15%.</div>
+        <div class="card">ImobEasy: 300+ leads em 2 meses; agendamentos +20%; 35% conversão; respostas <5 min; handoff -25%.</div>
+        <div class="card">Foundever: 92% CSAT; 85% FCR; 800+ clientes; tempo de resposta -25%.</div>
+        <div class="card">Tempo médio de resposta sob 5 minutos em todos os cargos.</div>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2 class="section-title">Formação & Aprendizado Contínuo</h2>
+      <div class="two-col">
+        <div class="card">
+          <h3>Bacharelado em Engenharia Mecatrônica</h3>
+          <p class="exp-meta">PUCPR · Mar 2022 – Nov 2024</p>
+          <p>Python, SolidWorks, lógica de programação, Arduino, Raspberry Pi; Secretária do Centro Acadêmico (comunicação/organização).</p>
+        </div>
+        <div class="card">
+          <h3>Cursos</h3>
+          <p>Customer Service — LinkedIn Learning (2025): escuta ativa, desescalonamento, jornada.</p>
+          <p>Excel Intermediário — Kultivi (2024): planilhas, funções, dashboards para decisão.</p>
+          <p>Em andamento: CRMs, analytics e Python para automação e melhoria de processos.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contato</h2>
+      <div class="contact card">
+        <div>
+          <h3>Pronto(a) para conversar sobre como posso apoiar seu time?</h3>
+          <p>Estou no Brasil e aberta a oportunidades remotas ou híbridas no mundo todo.</p>
+          <div class="pill-row">
+            <a class="btn" href="mailto:malurodrsan@gmail.com">Enviar e-mail →</a>
+            <a class="btn" style="background:var(--panel);color:var(--text);box-shadow:none;border:1px solid var(--border);" href="https://linkedin.com/in/malu-rodrigues-67025b271" target="_blank" rel="noopener">LinkedIn →</a>
+          </div>
+        </div>
+        <div>
+          <div class="chip"><strong>Email:</strong> malurodrsan@gmail.com</div>
+          <div class="chip"><strong>LinkedIn:</strong> linkedin.com/in/malu-rodrigues-67025b271</div>
+          <div class="chip"><strong>Localização:</strong> Brasil / Remoto</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © 2025 Malu Rodrigues dos Santos — CX, Operações & SDR
+    </footer>
+  </div>
+</body>
+</html>
